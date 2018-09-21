@@ -38,8 +38,8 @@ const objToSql = ob => {
 // ORM object for our SQL queries
 const orm = {
 
-    selectAll: (tableInput, _cb) => {
-        let queryString = `SELECT * FROM ${tableInput};`;
+    selectAll: (table, _cb) => {
+        let queryString = `SELECT * FROM ${table};`;
         // query to select all
         con.query(queryString, (err, res) => {
             if (err) throw err;
@@ -49,10 +49,7 @@ const orm = {
     },
     //table is the db table, columns is the columns we want to insert the values into
     insertOne: (table, columns, values, _cb) => {
-        let queryString = `INSERT INTO ${TABLE}`;
-
-        queryString += ` (${columns.toString()}) `;
-        queryString += `VALUES (${printQuestionMarks(values.length)}) `;
+        let queryString = `INSERT INTO ${table} (${columns.toString()}) VALUES (${printQuestionMarks(values.length)});`;
 
         console.log(queryString);
 
@@ -64,10 +61,7 @@ const orm = {
     },
     // objColVals example is {column: value}
     updateOne: (table, objColVals, condition, _cb) => {
-        let queryString = `UPDATE ${table} SET `;
-
-        queryString += `${objToSql(objColVals)} WHERE `;
-        queryString += `${condition}`;
+        let queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition};`;
 
         console.log(queryString);
 

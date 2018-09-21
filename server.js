@@ -9,13 +9,16 @@ app.use(parser.json());
 
 // static directory
 app.use(express.static('public'));
+
 // set up handlebars
 const exphbs = require('express-handlebars');
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // routes
-
+const router = require('./controllers/burgers_controller.js');
+app.use('/', router);
 
 
 // Listen to our server
