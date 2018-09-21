@@ -1,4 +1,4 @@
-const orms = require('../config/orms.js');
+const orms = require('../config/orm.js');
 
 const burger = {
     selectAll: _cb => {
@@ -6,15 +6,20 @@ const burger = {
             _cb(res);
         });
     },
-    insertOne: _cb => {
-        orms.insertOne(res => {
+    insertOne: (columns, values, _cb) => {
+        orms.insertOne('burgers', columns, values, (res) => {
             _cb(res);
         });
     },
-    updateOne: _cb => {
-        orms.updateOne(res => {
+    updateOne: (obsColVals, condition, _cb) => {
+        orms.updateOne('burgers', obsColVals, condition, (res) => {
             _cb(res);
         });
+    },
+    delete: (condition, _cb) => {
+        orms.delete('burgers', condition, (res) => {
+            _cb(res);
+        })
     }
 };
 

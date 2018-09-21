@@ -8,9 +8,18 @@ router.get('/', (req, res) => {
         let hbsBurgers = {
             burgers: data
         }
+        console.log(hbsBurgers);
         res.render('index', hbsBurgers);
     });
-
+    router.post('/burgers/:id', (req, res) => {
+        let condition = req.params.id;
+        console.log(condition, 'CHECK THE CONDITION');
+        burger.updateOne({
+            devoured: true
+        }, condition, () => {
+            res.redirect('/');
+        })
+    });
 
 });
 
