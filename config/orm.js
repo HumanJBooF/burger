@@ -69,8 +69,8 @@ const orm = {
         });
     },
 
-    delete: (table, condition, _cb) => {
-        let query = `DELETE FROM ${table} WHERE ${condition};`;
+    delete: (table, objColVals, condition, _cb) => {
+        let query = `UPDATE FROM ${table} SET ${objColVals(objColVals)} WHERE id = ${condition};`;
         console.log(query);
         con.query(query, (err, res) => {
             if (err) throw err;

@@ -15,7 +15,7 @@
                             <form action="/burgers/{{this.id}}" method="POST">
                                 <button class="btn waves-effect waves-light uneaten col s12 z-depth-5 hoverable tooltipped"
                                     type="submit" name="action">{{this.burger_name}}
-                                    <i class="fas fa-utensils"></i>
+                                    <i class="fas fa-utensils right"></i>
                                 </button>
                             </form>
                             {{/unless}}
@@ -34,9 +34,14 @@
                         <div class="col s12 buttons">
                             {{#each burgers}}
                             {{#if this.devoured}}
-                            <li class="devoured">
-                                {{this.burger_name}}
-                            </li>
+                            <div class="devoured">
+                                <form action="/delete/{{this.id}}" method="POST">
+                                    <button class="btn waves-effect waves-light devoured col s12 z-depth-5 hoverable tooltipped2"
+                                        type="submit" name="action">{{this.burger_name}}
+                                        <i class="fas fa-trash right"></i>
+                                    </button>
+                                </form>
+                            </div>
                             {{/if}}
                             {{/each}}
                         </div>

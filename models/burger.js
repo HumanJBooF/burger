@@ -16,8 +16,8 @@ const burger = {
             _cb(res);
         });
     },
-    delete: (condition, _cb) => {
-        orm.delete('burgers', condition, (res) => {
+    delete: (obsColVals, condition, _cb) => {
+        orm.delete('burgers', obsColVals, condition, (res) => {
             _cb(res);
         })
     }
