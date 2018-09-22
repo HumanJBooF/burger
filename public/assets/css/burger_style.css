@@ -2,3 +2,11 @@ body {
     background: url('../img/impossible-burgers.jpg') !important;
     background-size: cover !important;
 }
+
+.horizontal {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.uneaten, .devoured {
+    margin-bottom: 10px !important;
+}
