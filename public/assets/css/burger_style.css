@@ -7,6 +7,15 @@ body {
     background: rgba(255, 255, 255, 0.75);
 }
 
+.uneaten {
+    background-color: #6D2243 !important;
+    border: 2pt solid black;
+}
+
 .uneaten, .devoured {
     margin-bottom: 10px !important;
+}
+
+.material-tooltip {
+    background-color: #BA2640 !important;
 }

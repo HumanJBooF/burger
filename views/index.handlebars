@@ -13,7 +13,8 @@
                             {{#each burgers}}
                             {{#unless this.devoured}}
                             <form action="/burgers/{{this.id}}" method="POST">
-                                <button class="btn waves-effect waves-light uneaten col s12" type="submit" name="action">{{this.burger_name}}
+                                <button class="btn waves-effect waves-light uneaten col s12 z-depth-5 hoverable tooltipped"
+                                    type="submit" name="action">{{this.burger_name}}
                                     <i class="fas fa-utensils"></i>
                                 </button>
                             </form>
@@ -40,6 +41,28 @@
                             {{/each}}
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card horizontal col l6 offset-l3 s12">
+            <div class="card-stacked">
+                <h3 class="center">
+                    Add a Burger
+                </h3>
+                <div class="divider"></div>
+                <div class="card-content">
+                    <form action="/burgers/create" method="POST">
+                        <div class="input-field col s12">
+                            <input placeholder="Bacon on bacon burger" type="text" class="addBurger" name="addBurger">
+                        </div>
+                        <div class="row">
+                            <button class="btn waves-effect waves-light col offset-s4 s4" type="submit" name="action">Submit
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

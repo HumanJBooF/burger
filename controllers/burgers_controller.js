@@ -11,6 +11,12 @@ router.get('/', (req, res) => {
         console.log(hbsBurgers);
         res.render('index', hbsBurgers);
     });
+    router.post('/burgers/create', (req, res) => {
+        let burgerName = req.body.addBurger
+        burger.insertOne(['burger_name'], [burgerName], () => {
+            res.redirect('/');
+        });
+    });
     router.post('/burgers/:id', (req, res) => {
         let condition = req.params.id;
         console.log(condition, 'CHECK THE CONDITION');
