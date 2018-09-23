@@ -1,11 +1,20 @@
 body {
-    background: url('../img/impossible-burgers.jpg') no-repeat !important;
+    background: url('../img/burgs.jpg') fixed no-repeat !important;
     background-size: cover !important;
     font-family: 'Archivo Narrow', sans-serif;
 }
 
-.horizontal {
+.eat {
+    border-bottom: 2pt solid;
+}
+
+.card.small {
+    height: 25% !important;
+}
+
+.horizontal, .card.small {
     background: rgba(255, 255, 255, 0.75);
+    border: 2pt solid;
 }
 
 .uneaten {
