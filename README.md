@@ -7,7 +7,7 @@
 
 This app allows the user to add burgers to the available burgers sections, and _devourer_ burgers by clicking them sending them to the _devoured_ section. _Don't_ like a burger? Click it again in the devoured section to get rid of it for good! The app follows MVC design patterns and also a homemade ORM! Everytime you _eat_ an available burger you send a POST request to the database, allowing it to update for you in real time! Same with clicking a _devoured_ burger!
 
-![burgers](./public/assets/img/home.PNG)
+![burgers](public/assets/img/home.PNG)
 
 ## Technologies used
 - Node.js
