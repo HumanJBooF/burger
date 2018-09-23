@@ -70,7 +70,7 @@ const orm = {
     },
 
     delete: (table, objColVals, condition, _cb) => {
-        let query = `UPDATE FROM ${table} SET ${objColVals(objColVals)} WHERE id = ${condition};`;
+        let query = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE id = ${condition};`;
         console.log(query);
         con.query(query, (err, res) => {
             if (err) throw err;

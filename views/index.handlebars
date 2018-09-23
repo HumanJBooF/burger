@@ -34,6 +34,7 @@
                         <div class="col s12 buttons">
                             {{#each burgers}}
                             {{#if this.devoured}}
+                            {{#unless this.deleted}}
                             <div class="devoured">
                                 <form action="/delete/{{this.id}}" method="POST">
                                     <button class="btn waves-effect waves-light devoured col s12 z-depth-5 hoverable tooltipped2"
@@ -42,6 +43,7 @@
                                     </button>
                                 </form>
                             </div>
+                            {{/unless}}
                             {{/if}}
                             {{/each}}
                         </div>
