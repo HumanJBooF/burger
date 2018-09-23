@@ -3,19 +3,21 @@
         <h1 class="center">Eat-Da-Burger</h1>
     </div>
     <div class="row">
-        <div class="col l5 s12">
+        <div class="col l6 m12 s12">
             <div class="card horizontal">
                 <div class="card-stacked">
-                    <h3 class="center">Available Burgers</h3>
+
+                    <h3 class="center"><i class="fas fa-utensils"></i>Available Burgers<i class="fas fa-utensils"></i></h3>
+
                     <div class="divider"></div>
                     <div class="card-content">
                         <div class="col s12 buttons">
                             {{#each burgers}}
                             {{#unless this.devoured}}
                             <form action="/burgers/{{this.id}}" method="POST">
-                                <button class="btn waves-effect waves-light uneaten col s12 z-depth-5 hoverable tooltipped"
+                                <button class="btn waves-effect waves-light uneaten truncate col s12 z-depth-5 hoverable tooltipped"
                                     type="submit" name="action">{{this.burger_name}}
-                                    <i class="fas fa-utensils right"></i>
+
                                 </button>
                             </form>
                             {{/unless}}
@@ -25,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="offset-l2 col l5 s12">
+        <div class="col l6 m12 s12">
             <div class="card horizontal">
                 <div class="card-stacked">
                     <h3 class="center">Devoured Burgers</h3>
@@ -36,7 +38,7 @@
                             {{#if this.devoured}}
                             {{#unless this.deleted}}
                             <form action="/delete/{{this.id}}" method="POST">
-                                <button class="btn waves-effect waves-light devoured col s12 z-depth-5 hoverable tooltipped2"
+                                <button class="btn waves-effect waves-light devoured truncate col s12 z-depth-5 hoverable tooltipped2"
                                     type="submit" name="action">{{this.burger_name}}
                                     <i class="fas fa-trash right"></i>
                                 </button>
@@ -51,7 +53,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="card horizontal col l6 offset-l3 s12">
+        <div class="card horizontal col l6 m12 s12">
             <div class="card-stacked">
                 <h3 class="center">
                     Add a Burger

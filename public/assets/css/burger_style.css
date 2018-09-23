@@ -1,5 +1,5 @@
 body {
-    background: url('../img/impossible-burgers.jpg') !important;
+    background: url('../img/impossible-burgers.jpg') no-repeat !important;
     background-size: cover !important;
     font-family: 'Archivo Narrow', sans-serif;
 }
