@@ -15,11 +15,6 @@ const burger = {
         orm.updateOne('burgers', obsColVals, condition, (res) => {
             _cb(res);
         });
-    },
-    delete: (obsColVals, condition, _cb) => {
-        orm.delete('burgers', obsColVals, condition, (res) => {
-            _cb(res);
-        })
     }
 };
 

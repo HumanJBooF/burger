@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
 
     router.post('/delete/:id', (req, res) => {
         let condition = req.params.id;
-        burger.delete({
+        burger.updateOne({
             deleted: true
         }, condition, () => {
             res.redirect('/');

@@ -59,8 +59,10 @@
                 <div class="divider"></div>
                 <div class="card-content">
                     <form action="/burgers/create" method="POST">
-                        <div class="input-field col s12">
-                            <input placeholder="Bacon on bacon burger" type="text" class="addBurger" name="addBurger">
+                        <div class="input-field col s12 addBurg">
+                            <input placeholder="Bacon on bacon burger" type="text" class="addBurger" name="addBurger"
+                                required="" aria-required="true" oninvalid="this.setCustomValidity('Please Enter a Burger')"
+                                oninput="setCustomValidity('')"></input>
                         </div>
                         <div class="row">
                             <button class="btn waves-effect waves-light burgButton col offset-s3 s6" type="submit" name="action">Create!

@@ -33,3 +33,14 @@ body {
 .material-tooltip {
     background-color: #BA2640 !important;
 }
+
+.input-field input[type=text] {
+    color: #BA2640 !important;
+    border-bottom: 1pt solid !important;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+    color: #FF0000;
+    opacity: 0.5 !important;
+}
