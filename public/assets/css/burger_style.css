@@ -1,6 +1,7 @@
 body {
     background: url('../img/impossible-burgers.jpg') !important;
     background-size: cover !important;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 .horizontal {
@@ -8,12 +9,25 @@ body {
 }
 
 .uneaten {
-    background-color: #6D2243 !important;
+    background-color: #88A65E !important;
+    border: 2pt solid black;
+}
+
+.devoured {
+    background-color: #8C2318 !important;
     border: 2pt solid black;
 }
 
 .uneaten, .devoured {
     margin-bottom: 10px !important;
+    line-height: 2pt;
+    font-weight: bold;
+}
+
+.burgButton {
+    background-color: #F2C45A !important;
+    color: #5E8C6A !important;
+    font-weight: bold;
 }
 
 .material-tooltip {

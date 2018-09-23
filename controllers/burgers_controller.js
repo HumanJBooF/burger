@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
             res.redirect('/');
         })
     });
+
     router.post('/delete/:id', (req, res) => {
         let condition = req.params.id;
         burger.delete({
